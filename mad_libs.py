@@ -1,3 +1,4 @@
+import math
 """ a=input("Please type a sentence.")
 answer=a.split( )
 print(f"This sentence has {len(answer)} words.") """
@@ -23,9 +24,31 @@ if int(x)%2 == 0:
 else:
     print("Number is odd") """
 
+""" def tip():
+    res=input("Was the service bad, okay, good, or great? ")
+    res_1=res.lower()
+    if res_1 == "bad":
+        print("You have tipped 0%")
+    elif res_1 == "okay":
+        print("You have tipped 15%")
+    elif res_1 == "good":
+        print("You have tipped 20%")
+    elif res_1 == "great":
+        print("You have tipped 25%")
+    else:
+        print("Not a vaild response!")
+        tip()
 
-    
+tip() """
 
-
-
-
+def numb(x):
+    range_num=int(x) + 1
+    for i in range(1, range_num):
+        if int(x)%i == 0:
+            l.append(i)
+    print(f"The factors of {y} are:")
+    for i in l:
+        print(i)
+l=[]
+y=input("Input a number: ")
+numb(y)
