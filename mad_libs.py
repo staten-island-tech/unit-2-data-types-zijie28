@@ -23,25 +23,50 @@ if int(x)%2 == 0:
     print("Number is even")
 else:
     print("Number is odd") """
-
-""" def tip():
+""" def get_response():
     res=input("Was the service bad, okay, good, or great? ")
     res_1=res.lower()
-    if res_1 == "bad":
-        print("You have tipped 0%")
-    elif res_1 == "okay":
-        print("You have tipped 15%")
-    elif res_1 == "good":
-        print("You have tipped 20%")
-    elif res_1 == "great":
-        print("You have tipped 25%")
+    bill_calculator(res_1)
+def bill_calculator(response):
+    if response == "bad":
+        a=input("Would you like to tip 0%?")
+        a_1=a.lower()
+        if a_1 == "no":
+            get_response()
+        elif a == "yes":
+            print("You have tipped 0%")
+    elif response == "okay":
+        a=input("Would you like to tip 15%?")
+        a_1=a.lower()
+        if a_1 == "no":
+            get_response()
+        elif a == "yes":
+            print("You have tipped 15%")
+    elif response == "good":
+        a=input("Would you like to tip 20%?")
+        a_1=a.lower()
+        if a_1 == "no":
+            get_response()
+        elif a == "yes":
+            print("You have tipped 20%")
+    elif response == "great":
+        a=input("Would you like to tip 25%?")
+        a_1=a.lower()
+        if a_1 == "no":
+            get_response()
+        elif a == "yes":
+            print("You have tipped 25%")
     else:
         print("Not a vaild response!")
-        tip()
-
+        get_response()
+def tip():
+    res_2=input("What was your bill?")
+    get_response()
 tip() """
 
-def numb(x):
+
+
+""" def numb(x):
     range_num=int(x) + 1
     for i in range(1, range_num):
         if int(x)%i == 0:
@@ -52,3 +77,20 @@ def numb(x):
 l=[]
 y=input("Input a number: ")
 numb(y)
+ """
+def numb(x,y):
+    range_num=int(x) + 1
+    for i in range(1, range_num):
+        if int(x)%i == 0:
+            l.append(i)
+    range_num2=int(y) + 1
+    for i in range(1, range_num2):
+        if int(y)%i == 0:
+            l_2.append(i)
+    gcf_dict=set(l).intersection(l_2)
+    print(f"The greatest common factor between the 2 numbers is: {gcf_dict[:-1]}")
+l=[]
+l_2=[]
+x=input("Input a number: ")
+y=input("Input another number: ")
+numb(x,y)
