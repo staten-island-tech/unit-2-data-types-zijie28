@@ -78,7 +78,7 @@ l=[]
 y=input("Input a number: ")
 numb(y)
  """
-def numb(x,y):
+""" def numb(x,y):
     range_num=int(x) + 1
     for i in range(1, range_num):
         if int(x)%i == 0:
@@ -88,9 +88,10 @@ def numb(x,y):
         if int(y)%i == 0:
             l_2.append(i)
     gcf_dict=set(l).intersection(l_2)
-    print(f"The greatest common factor between the 2 numbers is: {gcf_dict[:-1]}")
+    gcf_list=list(gcf_dict)
+    print(f"The greatest common factor between the 2 numbers is: {gcf_list[-1]}")
 l=[]
 l_2=[]
 x=input("Input a number: ")
 y=input("Input another number: ")
-numb(x,y)
+numb(x,y) """
